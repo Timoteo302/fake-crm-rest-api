@@ -37,6 +37,21 @@ export async function action({request, params}) {
 
     // send data to the function and receive a response
     await actualizarCliente(params.clienteId, datos)
+    const Toast = Swal.mixin({
+        toast: true,
+        position: "top-end",
+        showConfirmButton: false,
+        timer: 2000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+            toast.onmouseenter = Swal.stopTimer;
+            toast.onmouseleave = Swal.resumeTimer;
+        }
+    });
+    Toast.fire({
+        icon: "success",
+        title: "Cliente actualizado!"
+    })
     return redirect('/')
 
     
