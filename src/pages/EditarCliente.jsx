@@ -2,6 +2,7 @@ import { Form, useNavigate, useLoaderData, useActionData, redirect } from "react
 import Formulario from "../components/Formulario"
 import { obtenerCliente, actualizarCliente } from "../data/clientes"
 import Error from "../components/Error"
+import Swal from "sweetalert2"
 
 export async function loader({ params }) {
     // console.log(params)
