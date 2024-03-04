@@ -1,0 +1,28 @@
+{
+  "clientes": [
+    {
+      "id": "2133",
+      "nombre": "Karen",
+      "empresa": "Google",
+      "email": "karen@karen.com",
+      "telefono": "13231231231",
+      "notas": "Una nota"
+    },
+    {
+      "id": "169a",
+      "nombre": "Pedro",
+      "empresa": "Google",
+      "email": "pedro@pedro.com",
+      "telefono": "13231231231",
+      "notas": "Una nota"
+    },
+    {
+      "id": "2135",
+      "nombre": "Timoteo",
+      "empresa": "Google",
+      "email": "timo@timo.com",
+      "telefono": "13231231231",
+      "notas": "Una nota"
+    }
+  ]
+}
