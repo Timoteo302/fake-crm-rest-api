@@ -15,6 +15,10 @@ function Index() {
     const clientes = useLoaderData()
     // console.log(clientes)
 
+    if (!clientes) {
+        return <Spinner />;
+    }
+
     return (
         <>
             <h1 className="font-black text-4xl text-blue-900">Clientes</h1>
@@ -22,7 +26,7 @@ function Index() {
 
             {clientes && clientes.length ? (
                 <table className="w-full bg-white shadow mt-5 table-auto">
-                    
+
                     <thead className="bg-blue-800 text-white">
                         <tr>
                             <th className="p-2">Cliente</th>
@@ -33,7 +37,7 @@ function Index() {
 
                     <tbody>
                         {clientes.map((cliente) => (
-                            <Cliente 
+                            <Cliente
                                 cliente={cliente}
                                 key={cliente.id}
                             />
@@ -42,9 +46,7 @@ function Index() {
 
                 </table>
             ) : (
-                <div>
-                    { clientes === null ? <Spinner /> : <p className="text-center mt-10">No hay Clientes aún</p>}
-                </div>
+                <p className="text-center mt-10">No hay Clientes aún</p>
             )}
         </>
     )
